@@ -1,0 +1,176 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Josefin Sans',
+    sans-serif;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+        'logo hero'
+        'msg hero';
+}
+
+.desktop-hero-img {
+    grid-area: hero;
+    height: 100vh;
+    max-width: 100vh;
+    display: block;
+}
+
+.mobile-hero-img {
+    display: none;
+    grid-area: hero;
+}
+
+.message {
+    grid-area: msg;
+    min-width: 20rem;
+    margin: 3rem;
+    padding: 0rem 7.5rem;
+    font-size: 2rem;
+}
+
+.logo {
+    grid-area: logo;
+    margin: 0rem 3rem;
+    padding: 2rem 7.5rem 0rem;
+}
+
+
+.message header {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase
+}
+
+header .top {
+    font-weight: 300;
+    margin: 5rem 0rem 0rem 0rem;
+}
+
+header .bottom {
+    margin: 0;
+    color: black;
+}
+
+.message p {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+
+.form {
+    display: flex;
+    position: relative;
+}
+
+.form input {
+    width: 23rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #D9CACD;
+    background: transparent;
+    padding-left: 1rem;
+}
+
+.form input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button {
+    margin-left: -5rem;
+    width: 6rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 1px 5px 15px #d6d4d4d1;
+    border: none;
+}
+
+.form button img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.form button:focus {
+    outline: none;
+}
+
+.form label {
+    position: absolute;
+    font-size: 1rem;
+    align-self: center;
+    bottom: -2rem;
+    color: #E06E6D;
+    display: none;
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: .5rem;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+}
+
+.error {
+    border: 2px solid #E06E6D !important
+}
+
+.display {
+    display: block !important;
+}
+
+@media (max-width: 600px) {
+
+    .wrapper {
+        background: none;
+        grid-template-areas: 
+            'logo'
+            'hero'
+            'msg';
+    }
+
+    .logo {
+        margin: 0;
+        padding: 3rem 3rem;
+    }
+
+    .desktop-hero-img {
+       display: none
+    }
+
+    .mobile-hero-img {
+        display: block;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .message {
+        min-width: 20rem;
+        margin: 0rem;
+        padding: 1rem 5rem;
+        text-align: center;
+    }
+
+    .form button {
+        margin-left: -5rem;
+        
+    }
+
+
+}

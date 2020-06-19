@@ -1,0 +1,134 @@
+html, body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(94, 12%, 34%);
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+p {
+    color: hsl(229, 6%, 66%);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+header {
+    width: 32rem;
+    margin: 3rem auto;
+}
+
+header * {
+    margin: .1rem
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+        "supervisor team calculator"
+        "supervisor karma calculator";
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 4rem 5rem 4rem;
+}
+
+section>img {
+    float: right
+}
+
+.cards > section {
+min-height: 14rem;
+max-width: 20rem;
+padding: 1rem;
+border-radius: 0.5rem;
+box-shadow: 0.1rem 0.5rem 1rem 0.1rem hsl(0, 0%, 50%, 0.5);
+text-align: left;
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: 0.3rem solid hsl(180, 62%, 55%);
+}
+
+.team {
+    min-width: 7rem;
+    grid-area: team;
+border-top: 0.3rem solid hsl(0, 78%, 62%);
+}
+
+.karma {
+    min-width: 7rem;
+    grid-area: karma;
+    border-top: 0.3rem solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    grid-area: calculator;
+    border-top: 0.3rem solid hsl(212, 86%, 64%);
+}
+
+/* media query for 375 */
+@media(max-width: 600px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem
+    }
+    header {
+        width: 17rem;
+        margin: 3rem auto;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-template-areas:
+            "supervisor"
+            "team"
+            "karma"
+            "calculator";
+        margin: 3rem;
+    }
+
+    .cards>section {
+        min-height: 12rem;
+        width: auto;
+        text-align: left;
+        padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    }
+
+    .supervisor {
+        grid-area: supervisor;
+        border-radius: .2rem;
+    }
+
+    .team {
+        grid-area: team;
+        border-radius: .2rem;
+    }
+
+    .karma {
+        grid-area: karma;
+        border-radius: .2rem;
+    }
+
+    .calculator {
+        grid-area: calculator;
+        border-radius: .2rem;
+    }
+
+    footer {
+        margin: 2rem;
+    }
+}

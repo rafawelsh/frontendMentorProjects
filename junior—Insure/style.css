@@ -1,0 +1,38 @@
+:root {
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex > * {
+    flex: 1;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'DM Serif Display', sans-serif;
+    color: white;
+}
+/* navigation bar */
+header {
+    background-color: var(--dark-violet);
+}

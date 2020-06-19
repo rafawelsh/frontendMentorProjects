@@ -1,0 +1,126 @@
+:root{
+    --main-font: 'Karla', sans-serif;
+    --main-font-size: 16px;
+    --light-cyan: hsl(179, 62%, 43%);
+    --b-yellow: hsl(71, 73%, 54%);
+    --text-gray: hsl(204, 43%, 93%);
+    --heading-text: hsl(218, 22%, 67%);
+}
+
+body {
+    background: #E6EFF6;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    font-family: var(--main-font);
+}
+
+.block1 {
+    grid-column: span 2;
+    border-radius: 15px 15px 0px 0px;
+    padding: 0 4em 2em 4em;
+    background: white;
+}
+
+.block1 .heading-banner{
+    color: var(--light-cyan);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+
+.heading-text {
+    color: var(--heading-text);
+    font-size: 1.125em;
+    line-height: 1.75em;
+}
+
+.block2 {
+    background: var(--light-cyan);
+    border-bottom-left-radius: 15px;
+    padding: 0 4em;
+}
+
+
+.block3 {
+    background: #43BEBE;
+    border-bottom-right-radius: 15px;
+    padding: 0 4em;
+    
+}
+
+.sub-box-heading {
+    color: var(--b-yellow);
+    font-weight: 400;
+}
+
+.b-header {
+    color: white;
+    font-weight: 400;
+    padding-bottom: .5rem;
+}
+
+.sub-box-text {
+    color: var(--text-gray)
+}
+
+.dollar {
+    font-size: 2.5em;
+    padding-right: .25em;
+    color: rgba(255, 255, 255, 1)
+}
+
+.b2-access {
+    font-size: 1.125em;
+}
+
+.btn {
+    display: grid;
+    align-content: center;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    height: 50px;
+    background-color: var(--b-yellow);
+    border-radius: 5px;
+}
+
+.why-list {
+    line-height: .7em;
+    padding-bottom: 1em;
+}
+
+.transparent-text {
+    color: rgba(255,255,255,0.7)
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 80vw;
+    }
+
+    .block1 {
+        grid-column: span 1;
+    }
+
+    .block2 {
+        border-radius: 0 0 0 0;
+        padding-bottom: 1em;
+    }
+
+    .block3 {
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .heading-text {
+        font-size: 1em;
+    }
+}

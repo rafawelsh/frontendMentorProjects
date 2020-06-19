@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  
+</head>
+<body>
+  <div class="wrapper">
+    
+    <img src="images/logo.svg" alt="" class="logo">
+    
+    <div class="message">
+      <header>
+        <h2 class="top">We're</h2>
+        <h2 class="bottom">coming soon</h2>
+      </header>
+      
+      <p>Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      
+      <div class="form">
+        <input type="email" name="email" id="email" placeholder="Email Address">
+        <label for="email" id="emaillabel">Please provide valid email</label>
+        <button id="button" onclick="validateEmail()" aria-label="validate"><img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+
+    
+    
+      <footer>
+          <span class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://rafaelcastellanoswelsh.com">Rafael Castellanos-Welsh</a>.
+          </span>
+        </footer>
+
+    </div>
+
+    
+    <img src="images/hero-desktop.jpg" alt="landing-page" class="desktop-hero-img">
+    <img src="images/hero-mobile.jpg" alt="landing-page" class="mobile-hero-img">
+
+  </div>
+ 
+  <script>
+    function validateEmail() {
+      var email = document.getElementById('email')
+      var button = document.getElementById('button')
+      var re = /\S+@\S+\.\S+/;
+      if (!re.test(email.value)) {
+        email.classList.add('error')
+        button.classList.add('error')
+        document.getElementById('emaillabel').classList.add('display')
+        
+
+      } else {
+        document.getElementById('emaillabel').classList.remove('display')
+        email.classList.remove('error')
+        button.classList.remove('error')
+      }
+    }
+  </script>
+  
+</body>
+</html>
