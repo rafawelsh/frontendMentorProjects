@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+}
+
+body {
+    background-color: var(--violet);
+    background-image: url('./images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+}
+
+header {
+    padding: 2rem 0;
+    display: flex;
+    align-self: flex-start;
+    margin: 0;
+}
+
+header > img {
+    float: left;
+    height: 40px;
+    width: auto;
+}
+
+.container > * {
+    text-align: center;
+}
+
+.container img {
+     max-width: 80vw;
+}
+.text-container .info {
+    color: white;
+    padding: 0.5rem 0;
+}
+
+.text-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.text-container p {
+    font-size: 1.rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0.5rem 0;
+    background-color: white;
+    color: var(--violet);
+    border: none;
+    border-radius: 50px;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+footer > a {
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+footer > a  i {
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: left;
+    }
+
+    .wrapper {
+        height: 100vh;
+        align-content: space-between;
+    }
+
+    header {
+        height: 5rem;
+    }   
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        padding: 4rem 0;
+    }
+
+    .container img {
+        flex-basis: 1;
+        max-width: 50% ;
+        height: auto;
+        padding-right: 2rem;
+    }
+
+    .container .text-container {
+        flex-basis: 1;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .text-container h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        margin-top: 2rem;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
+    footer {
+        align-self: flex-end;
+    }
+   
+} 
