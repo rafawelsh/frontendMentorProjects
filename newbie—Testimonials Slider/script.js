@@ -3,7 +3,8 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 
 let index = 0;
-display(index);
+
+
 function display(index) {
     slides.forEach((slide) => {
         slide.style.display = 'none';
