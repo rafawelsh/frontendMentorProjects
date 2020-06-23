@@ -9,6 +9,7 @@
 
 body {
     background: #E6EFF6;
+    cursor: pointer;
 }
 
 .container {
@@ -92,6 +93,13 @@ body {
     border-radius: 5px;
 }
 
+.btn:hover {
+    cursor: url("/images/cursor1.png"), row-resize;
+}
+
+.btn:active {
+    cursor: crosshair;
+}
 .why-list {
     line-height: .7em;
     padding-bottom: 1em;
