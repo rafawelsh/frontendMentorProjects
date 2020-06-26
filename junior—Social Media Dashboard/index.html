@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Social Media Dashboard</title>
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="top-wrapper" id="top">
+      <div class="top">
+        <div class="dashboard-name">
+          <h2>Social Media Dashboard</h2>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <span class="divider"></span>
+        <div class="toggle-btn">
+          <p>Dark Mode</p>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label for="chk" class="label">
+            <span></span>
+            <span></span>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="accounts-grid">
+      <div class="fb-followers followers-grid">
+        <p class='user-name'><span><img src="./images/icon-facebook.svg" alt="Facebook Logo"></span>@nathanf</p>
+        <p class="followers-count">1987</p>
+        <p class="followers">Followers</p>
+        <p class="today-count"><span><img src="./images/icon-up.svg" alt="arrow"></span>12 Today</p>
+      </div>
+      <div class="tw-followers followers-grid">
+        <p class='user-name'><span><img src="./images/icon-twitter.svg" alt="Twitter Logo"></span>@nathanf</p>
+        <p class="followers-count">1044</p>
+        <p class="followers">Followers</p>
+        <p class="today-count"><span><img src="./images/icon-up.svg" alt="arrow"></span>99 Today</p>
+      </div>
+      <div class="in-followers followers-grid">
+        <p class='user-name'><span><img src="./images/icon-instagram.svg" alt="Instagram Logo"></span>@realnathanf</p>
+        <p class="followers-count">11k</p>
+        <p class="followers">Followers</p>
+        <p class="today-count"><span><img src="./images/icon-up.svg" alt="arrow"></span>1099 Today</p>
+      </div>
+      <div class="yt-followers followers-grid">
+        <p class='user-name'><span><img src="./images/icon-youtube.svg" alt="YouTube Logo"></span>Nathan F.</p>
+        <p class="followers-count">8239</p>
+        <p class="followers">Subscribers</p>
+        <p class="today-count red"><span><img src="./images/icon-down.svg" alt="arrow"></span>144 Today</p>
+      </div>
+    </section>
+
+    <section class="overview">
+
+      <p class="overview-title">Overview - Today</p>
+
+      <div class="overview-grid">
+
+        <div class="fb-data grid-data">
+
+          <div class="left">
+            <p class="data-title">Page Views</p>
+            <div class="count">87</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-facebook.svg" alt="">
+            <p class="data-avg"><span><img src="./images/icon-up.svg" alt="arrow"></span>3%</p>
+          </div>
+        </div>
+        <div class="fb-data grid-data">
+          <div class="left">
+            <p class="data-title">Likes</p>
+            <div class="count">52</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-facebook.svg" alt="">
+            <p class="data-avg red"><span><img src="./images/icon-down.svg" alt="arrow"></span>2%</p>
+          </div>      
+        </div>
+        <div class="in-data grid-data">
+          <div class="left">
+            <p class="data-title">Likes</p>
+            <div class="count">5462</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-instagram.svg" alt="">
+            <p class="data-avg"><span><img src="./images/icon-up.svg" alt="arrow"></span>2257%</p>
+          </div>
+        </div>
+        <div class="in-data grid-data">
+          <div class="left">
+            <p class="data-title">Profile Views</p>
+            <div class="count">52k</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-instagram.svg" alt="">
+            <p class="data-avg"><span><img src="./images/icon-up.svg" alt="arrow"></span>1375%</p>
+          </div>
+        </div>
+        <div class="tw-data grid-data">
+          <div class="left">
+            <p class="data-title">Retweets</p>
+            <div class="count">117</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-twitter.svg" alt="">
+            <p class="data-avg"><span><img src="./images/icon-up.svg" alt="arrow"></span>303%</p>
+          </div>
+        </div>
+        <div class="tw-data grid-data">
+          <div class="left">
+            <p class="data-title">Likes</p>
+            <div class="count">507</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-twitter.svg" alt="">
+            <p class="data-avg"><span><img src="./images/icon-up.svg" alt="arrow"></span>553%</p>
+          </div>
+        </div>
+        <div class="yt-data grid-data">
+          <div class="left">
+            <p class="data-title">Likes</p>
+            <div class="count">107</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-youtube.svg" alt="">
+            <p class="data-avg red"><span><img src="./images/icon-down.svg" alt="arrow"></span>19%</p>
+          </div>
+        </div>
+        <div class="yt-data grid-data">
+          <div class="left">
+            <p class="data-title">Total Views</p>
+            <div class="count">1407</div>
+          </div>
+          <div class="right">
+            <img src="./images/icon-youtube.svg" alt="">
+            <p class="data-avg red"><span><img src="./images/icon-down.svg" alt="arrow"></span>12%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

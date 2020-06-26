@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram: linear-gradient(rgb(253, 196, 104), rgb(223, 73, 150));
+    --youtube: hsl(348, 97%, 39%);
+
+    /* light theme colors */
+    --toggle-color: hsl(230, 22%, 74%);
+    --background-white: hsl(0, 0%, 100%);
+    --top-background-light-blue: hsl(225, 100%, 98%);
+    --card-background-light-blue: hsl(227, 47%, 96%);
+    --text-color: hsl(228, 12%, 44%);
+    --num-color: hsl(230, 17%, 14%);
+}
+
+[data-theme='dark'] {
+    /* dark theme colors */
+    --toggle-color: linear-gradient(to right hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --background-white: hsl(230, 17%, 14%);
+    --top-background-light-blue: hsl(232, 19%, 15%);
+    --card-background-light-blue: hsl(228, 28%, 20%);
+    --text-color: hsl(228, 34%, 66%);
+    --num-color: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--background-white);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 10% 40% 50%;
+    height: 100vh;
+}
+
+/* top section */
+.top-wrapper {
+    margin: 0;
+    background-color: var(--top-background-light-blue);
+    height: 30vh;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80vw;
+    padding-top: 2rem;
+}
+
+.top > * {
+    margin: 0;
+}
+
+.top .dashboard-name {
+    color: var(--text-color)
+}
+
+.top h2 {
+    font-size: 1.5rem;
+    color: var(--num-color)
+}
+
+.top .toggle-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.toggle-btn p {
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.top .label {
+    background-color: var(--toggle-color);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 15px;
+    width: 30px;
+    transform: scale(1.5);
+}
+
+.top .label::before {
+    content: '';
+    position: aboslute;
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    height: 13px;
+    width: 13px;
+    transform: translateX(15px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(0px)
+}
+
+/* accounts section */
+.accounts-grid {
+    max-width: 100%;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 1rem;
+    
+}
+
+.accounts-grid > * {
+    text-align: center;
+}
+
+.accounts-grid .followers-grid {
+    background-color: var(--card-background-light-blue);
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.followers-grid.fb-followers {
+    border-top: 5px solid var(--facebook);
+}
+
+.followers-grid.tw-followers {
+      border-top: 5px solid var(--twitter);
+}
+
+.followers-grid.in-followers {
+    position: relative;
+}
+
+.followers-grid.in-followers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #fdc468, #df4996);
+    border-radius: 5px 5px 0 0;
+}
+
+.followers-grid.yt-followers {
+        border-top: 5px solid var(--youtube);
+}
+
+/* grid styling within the accounts grid */
+
+.user-name {
+    color: var(--text-color);
+    padding-bottom: 1.25rem;
+    vertical-align: middle;
+}
+
+.followers-count {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--num-color);
+}
+
+.followers {
+    text-transform: uppercase;
+    color: var(--text-color);
+    padding-bottom: 1.25rem;
+}
+
+.today-count {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--lime-green)
+}
+
+.today-count.red {
+    color: var(--bright-red)
+}
+
+/* overview section */
+.overview {
+    max-width: 100%;
+    width: 80vw;
+}
+
+.overview .overview-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    padding-bottom: 1rem;
+}
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+/* individual panels in overview-grid */
+.overview-grid .grid-data {
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    margin: 0;
+    background-color: var(--card-background-light-blue);
+    border-radius: 5px;
+    min-height: 105px;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-data .left > *,
+.grid-data .right > *{
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.grid-data .left {
+    text-align: start;
+}
+
+.grid-data .right {
+    text-align: end;
+}
+
+.grid-data .data-title {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.grid-data .count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--num-color)
+}
+
+.grid-data .data-avg {
+    font-size: 0.9rem;
+    color: var(--lime-green)
+}
+
+.grid-data .data-avg.red {
+    color: var(--bright-red)
+}
+
+@media only screen and (max-width: 700px) {
+    .wrapper {
+        grid-template-rows: 1fr;
+    }
+
+    /* top styling mobile */
+    .top {
+        flex-direction: column;
+    }
+
+    .top-wrapper {
+        margin-bottom: -3rem;
+    }
+
+    .top .dashboard-name {
+        align-self: start;
+        margin-left: 0
+        
+    }
+    .top .divider {
+        border: 1px solid var(--text-color);
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .top .toggle-btn {
+        align-self: stretch;
+    }
+
+    .top .toggle-btn p {
+        margin: 0px;
+        font-size: 1rem;
+    }
+
+    .top .toggle-btn label {
+        margin-right: 1rem;
+    }
+
+    .accounts-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+
+    .grid-data .left {
+        margin-left: 2rem;
+    }
+
+    .grid-data .right {
+        margin-right: 2rem;
+    }
+}
