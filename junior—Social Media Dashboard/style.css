@@ -7,7 +7,6 @@
     --twitter: hsl(203, 89%, 53%);
     --instagram: linear-gradient(rgb(253, 196, 104), rgb(223, 73, 150));
     --youtube: hsl(348, 97%, 39%);
-
     /* light theme colors */
     --toggle-color: hsl(230, 22%, 74%);
     --background-white: hsl(0, 0%, 100%);
@@ -15,16 +14,18 @@
     --card-background-light-blue: hsl(227, 47%, 96%);
     --text-color: hsl(228, 12%, 44%);
     --num-color: hsl(230, 17%, 14%);
+     
 }
 
 [data-theme='dark'] {
     /* dark theme colors */
-    --toggle-color: linear-gradient(to right hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --toggle-color:  rgb(62, 218, 130);
     --background-white: hsl(230, 17%, 14%);
     --top-background-light-blue: hsl(232, 19%, 15%);
     --card-background-light-blue: hsl(228, 28%, 20%);
     --text-color: hsl(228, 34%, 66%);
     --num-color: hsl(0, 0%, 100%);
+   
 }
 
 * {
@@ -98,13 +99,8 @@ body {
     transform: scale(1.5);
 }
 
-.top .label::before {
-    content: '';
-    position: aboslute;
-}
-
 .label .ball {
-    background-color: #fff;
+    background-color: var(--text-color);
     border-radius: 50%;
     position: absolute;
     left: 1px;
@@ -120,7 +116,7 @@ body {
 }
 
 .checkbox:checked + .label .ball {
-    transform: translateX(0px)
+    transform: translateX(0px);
 }
 
 /* accounts section */
@@ -177,11 +173,17 @@ body {
 }
 
 /* grid styling within the accounts grid */
+.followers-grid .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 1rem;
+}
 
 .user-name {
     color: var(--text-color);
-    padding-bottom: 1.25rem;
-    vertical-align: middle;
+    padding-left: 0.5rem;
 }
 
 .followers-count {
@@ -194,6 +196,17 @@ body {
     text-transform: uppercase;
     color: var(--text-color);
     padding-bottom: 1.25rem;
+}
+
+.arrow-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-img > img {
+    height: 50%;
+    padding-right: 5px;
 }
 
 .today-count {
