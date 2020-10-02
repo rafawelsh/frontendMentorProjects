@@ -1,0 +1,20 @@
+body {
+	margin: 0 auto;
+	background-color: #a18c30;
+	width: 90vw;
+}
+.container {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 2rem;
+}
+.project-tile {
+	/* background-color: #d3ba4a; */
+	border: 2px dotted #eed360;
+	padding: 1rem;
+}
+.project-tile > img {
+	max-height: 90%;
+	width: 100%;
+}
