@@ -1,20 +1,53 @@
 body {
+	box-sizing: border-box;
 	margin: 0 auto;
-	background-color: #a18c30;
+	background-color: #f79d5e;
 	width: 90vw;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
 }
 .container {
 	padding: 1rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	grid-gap: 2rem;
 }
 .project-tile {
 	/* background-color: #d3ba4a; */
-	border: 2px dotted #eed360;
+	border: 2px dotted #786151;
 	padding: 1rem;
 }
 .project-tile > img {
 	max-height: 90%;
 	width: 100%;
+}
+h1 {
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	position: relative;
+	color: #3060ab;
+	text-transform: none;
+	z-index: 5;
+}
+
+a::after {
+	content: "";
+	border-bottom: 5px solid #52ab81;
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+	right: 100%;
+	transition: right 0.5s cubic-bezier(0, 0.3, 0, 1);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:hover::after {
+	border-color: #52ab81;
+	right: 0;
 }
