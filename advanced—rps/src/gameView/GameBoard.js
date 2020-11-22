@@ -130,11 +130,11 @@ export default function GameBoard() {
 				<StyledGameboardActive className='active-board'>
 					<div className='hands'>
 						<div className='hand-active'>
-							<GameHands handOptions={userHand} onClick={userChoice} />
+							<GameHands handOptions={userHand} onClick={restartGame} />
 							<p>YOU PICKED</p>
 						</div>
 						<div className='hand-active'>
-							<GameHands handOptions={computerHand} onClick={userChoice} />
+							<GameHands handOptions={computerHand} onClick={restartGame} />
 							<p>THE HOUSE PICKED</p>
 						</div>
 					</div>

@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	width: 85%;
-	max-width: 900px;
+	max-width: 650px;
 `;
 
 export const ScoreContext = createContext();
@@ -33,8 +33,8 @@ export default function App() {
 				<StyledWrapper>
 					<Scoreboard />
 					<GameBoard />
-					<Rules />
 				</StyledWrapper>
+				<Rules />
 			</StyledApp>
 		</ScoreContext.Provider>
 	);
