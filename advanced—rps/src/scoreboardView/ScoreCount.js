@@ -9,8 +9,8 @@ const StyledScoreCount = styled.div`
 	align-items: center;
 	background-color: white;
 	color: hsl(229, 25%, 31%);
-	padding: 0.25rem 1.5rem;
-	margin: 0.25rem 1rem;
+	padding: 0.25rem 1rem;
+	margin: 0.25rem 0.75rem;
 	border-radius: 0.25rem;
 	h3 {
 		font-size: 0.75rem;
@@ -20,7 +20,7 @@ const StyledScoreCount = styled.div`
 	}
 	p {
 		margin: 0;
-		font-size: 2.75rem;
+		font-size: 2rem;
 		color: hsl(229, 25%, 31%);
 	}
 `;

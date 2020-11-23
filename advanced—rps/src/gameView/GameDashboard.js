@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import GameHands from "./GameHands";
-import GameResults from "./GameResults";
+import GameActive from "./GameActive";
 import { ScoreContext } from "../App";
 
 const StyledGameboardWrapper = styled.div`
-	min-height: 65vh;
+	min-height: 70vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,29 +32,16 @@ const StyledGameboardWaiting = styled.div`
 		grid-column: span 7;
 	}
 	& div:nth-child(2) {
-		grid-column: 2 / 3;
+		grid-column: 1 / 2;
 	}
 	& div:nth-child(3) {
-		grid-column: 7 / end;
+		grid-column: 7 / 8;
 	}
 	& div:nth-child(4) {
-		grid-column: 2 / 4;
+		grid-column: 2 / 3;
 	}
 	& div:nth-child(5) {
-		grid-column: 6 / end;
-	}
-`;
-
-const StyledGameboardActive = styled.div`
-	text-align: center;
-	.hands {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
-	.hand-active {
-		padding: 2rem;
+		grid-column: 6 / 7;
 	}
 `;
 
@@ -105,14 +92,11 @@ export default function GameBoard() {
 		if (chosenHand.losesTo.includes(randomHand.id)) {
 			setGameResults("lose");
 			setScore(0);
-			console.log("You lost!");
 		} else if (randomHand.losesTo.includes(chosenHand.id)) {
 			setGameResults("win");
 			setScore((score) => score + 1);
-			console.log("You won!");
 		} else if (chosenHand.id === randomHand.id) {
 			setGameResults("draw");
-			console.log("There was a tie");
 		}
 	}
 
@@ -127,19 +111,13 @@ export default function GameBoard() {
 					<GameHands handOptions={handOptions[4]} onClick={userChoice} />
 				</StyledGameboardWaiting>
 			) : (
-				<StyledGameboardActive className='active-board'>
-					<div className='hands'>
-						<div className='hand-active'>
-							<GameHands handOptions={userHand} onClick={restartGame} />
-							<p>YOU PICKED</p>
-						</div>
-						<div className='hand-active'>
-							<GameHands handOptions={computerHand} onClick={restartGame} />
-							<p>THE HOUSE PICKED</p>
-						</div>
-					</div>
-					<GameResults gameResults={gameResults} onClick={restartGame} />
-				</StyledGameboardActive>
+				<GameActive
+					userHand={userHand}
+					computerHand={computerHand}
+					restartGame={restartGame}
+					activeGame={activeGame}
+					gameResults={gameResults}
+				/>
 			)}
 		</StyledGameboardWrapper>
 	);

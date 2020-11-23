@@ -1,8 +1,9 @@
 import React, { useState, createContext } from "react";
 import Scoreboard from "./scoreboardView/Scoreboard";
-import GameBoard from "./gameView/GameBoard";
+import GameDashboard from "./gameView/GameDashboard";
 import styled from "styled-components";
 import Rules from "./Rules";
+
 const StyledApp = styled.div`
 	box-sizing: border-box;
 	background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
@@ -14,8 +15,9 @@ const StyledWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	width: 85%;
-	max-width: 650px;
+	max-width: 800px;
 `;
 
 export const ScoreContext = createContext();
@@ -32,7 +34,7 @@ export default function App() {
 			<StyledApp>
 				<StyledWrapper>
 					<Scoreboard />
-					<GameBoard />
+					<GameDashboard />
 				</StyledWrapper>
 				<Rules />
 			</StyledApp>

@@ -4,8 +4,9 @@ import ScoreCount from "./ScoreCount";
 
 const StyledScoreboard = styled.div`
 	min-height: 10vh;
-	margin-top: 2rem;
 	width: 100%;
+	max-width: 650px;
+	margin: 2rem 0rem auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -14,7 +15,7 @@ const StyledScoreboard = styled.div`
 	color: white;
 
 	img {
-		width: 75px;
+		width: 3rem;
 		padding: 1rem;
 	}
 `;

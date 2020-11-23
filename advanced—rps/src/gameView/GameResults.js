@@ -12,13 +12,22 @@ const StyledMessage = styled.div`
 		outline: none;
 		color: hsl(217, 16%, 45%);
 		cursor: pointer;
-		color: #b5b9c9;
+		color: hsl(229, 25%, 31%);
 		background-color: white;
 		border: none;
 		border-radius: 0.5rem;
 		font-size: 0.75rem;
 		padding: 1rem 2rem;
 		text-transform: uppercase;
+	}
+
+	@media only screen and (min-width: 600px) {
+		p {
+			font-size: 2rem;
+		}
+		button {
+			padding: 1rem 3rem;
+		}
 	}
 `;
 

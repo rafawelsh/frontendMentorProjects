@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledGameHands = styled.div`
+	margin: 0 auto;
 	background-color: white;
 	border: 10px solid ${(props) => props.base};
 	border-radius: 50%;
