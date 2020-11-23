@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/frontendMentorProjects/advanced%E2%80%94rps/static/css/main.ece3cd5f.chunk.css",
+    "main.js": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/main.1a1f6abc.chunk.js",
+    "main.js.map": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/main.1a1f6abc.chunk.js.map",
+    "runtime-main.js": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/runtime-main.83e332d4.js",
+    "runtime-main.js.map": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/runtime-main.83e332d4.js.map",
+    "static/js/2.a5963419.chunk.js": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/2.a5963419.chunk.js",
+    "static/js/2.a5963419.chunk.js.map": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/2.a5963419.chunk.js.map",
+    "index.html": "/frontendMentorProjects/advanced%E2%80%94rps/index.html",
+    "precache-manifest.bffd3dc09d5ca3e2a91cd499e53989cc.js": "/frontendMentorProjects/advanced%E2%80%94rps/precache-manifest.bffd3dc09d5ca3e2a91cd499e53989cc.js",
+    "service-worker.js": "/frontendMentorProjects/advanced%E2%80%94rps/service-worker.js",
+    "static/css/main.ece3cd5f.chunk.css.map": "/frontendMentorProjects/advanced%E2%80%94rps/static/css/main.ece3cd5f.chunk.css.map",
+    "static/js/2.a5963419.chunk.js.LICENSE.txt": "/frontendMentorProjects/advanced%E2%80%94rps/static/js/2.a5963419.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83e332d4.js",
+    "static/js/2.a5963419.chunk.js",
+    "static/css/main.ece3cd5f.chunk.css",
+    "static/js/main.1a1f6abc.chunk.js"
+  ]
+}
