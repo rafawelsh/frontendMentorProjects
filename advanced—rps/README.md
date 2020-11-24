@@ -4,4 +4,5 @@ This application was a [Frontend Mentor](https://www.frontendmentor.io) challeng
 
 #Technologies
 
-I used React for this project. I practice using useState and useContext in this project. I styled the components using styled-components.
+I used React for this project. I practiced using useState and useContext in this project. I styled the components using styled-components.
+Here is the [link to the live demo](https://rafawelsh.github.io/RPS-FMio/)
