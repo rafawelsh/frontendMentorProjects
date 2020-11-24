@@ -7,9 +7,9 @@ body {
 	font-weight: 400;
 }
 .container {
-	padding: 1rem;
+	/* padding: 1rem; */
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 2rem;
 }
 .project-tile {
@@ -50,4 +50,12 @@ a:hover {
 a:hover::after {
 	border-color: #52ab81;
 	right: 0;
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
